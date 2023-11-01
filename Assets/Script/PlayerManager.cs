@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class PlayerManager : MonoBehaviour
     private Button _nextPlayer, _prevoiusPlayer,_startGame;
     [SerializeField]
     private GameObject[] _players=new GameObject[2];
-    public GameObject _currentPlayer;
-    private int i = 0;
+    public  GameObject _currentPlayer;
+    public int i = 0;
     void Start()
     {
         _currentPlayer = _players[i];
+
         _nextPlayer.onClick.AddListener(Next);
         _prevoiusPlayer.onClick.AddListener(Previous);
+        _startGame.onClick.AddListener(goToLobby);
     }
 
     
@@ -46,5 +49,11 @@ public class PlayerManager : MonoBehaviour
             _currentPlayer.SetActive(true);
         }
         
+    }
+
+    void goToLobby()
+    {
+        PlayerPrefs.SetInt("i", i);
+        SceneManager.LoadScene("Lobby");
     }
 }
