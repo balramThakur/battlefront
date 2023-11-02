@@ -18,6 +18,6 @@ public class Player : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * 4f;
 
         transform.Rotate(0, moveX, 0);
-        transform.Translate(0, 0, moveZ);
+        
     }
 }
