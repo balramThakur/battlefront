@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Players:
-  - {fileID: 919132149155446097, guid: b5f3bf196e199c44390ab0b4f0f55111, type: 3}
-  - {fileID: 919132149155446097, guid: b28f2c86f429c184e8687ae371cd8842, type: 3}
+  - {fileID: 3164094170702552596, guid: 7395d88d59118ea45b508381e667a6f3, type: 3}
+  - {fileID: 8180702833498389989, guid: 49aa33d6ef2cb9e4a8ce2ac053e23d3d, type: 3}
   spwanPosition: {fileID: 1707403121}
 --- !u!4 &276975365
 Transform:
