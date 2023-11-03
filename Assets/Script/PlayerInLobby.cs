@@ -7,6 +7,7 @@ public class PlayerInLobby : MonoBehaviour
     [SerializeField]
     private GameObject[] _Players;
     public Transform spwanPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,8 @@ public class PlayerInLobby : MonoBehaviour
         Debug.Log(index);
         GameObject prefeb = _Players[index];
         GameObject clone = Instantiate(prefeb, spwanPosition.position, Quaternion.identity);
+        clone.SetActive(true);
+        clone.transform.parent = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame

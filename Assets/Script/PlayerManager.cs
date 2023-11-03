@@ -16,9 +16,7 @@ public class PlayerManager : MonoBehaviour
     {
         _currentPlayer = _players[i];
 
-        _nextPlayer.onClick.AddListener(Next);
-        _prevoiusPlayer.onClick.AddListener(Previous);
-        _startGame.onClick.AddListener(goToLobby);
+        
     }
 
     
@@ -27,31 +25,32 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-    void Next()
+    public void Next()
     {
-        i++;
-        if (i<_players.Length)
+        if (i < _players.Length-1)
         {
             _currentPlayer.SetActive(false);
+            i++;
+            _currentPlayer = _players[i];
+            _currentPlayer.SetActive(true);
+
+        }
+    }
+
+    public void Previous()
+    {
+        
+        if (i>0)
+        {  
+            _currentPlayer.SetActive(false);
+            i--;
             _currentPlayer = _players[i];
             _currentPlayer.SetActive(true);
         }
         
     }
 
-    void Previous()
-    {
-        i--;
-        if (i>=0)
-        {
-            _currentPlayer.SetActive(false);
-            _currentPlayer = _players[i];
-            _currentPlayer.SetActive(true);
-        }
-        
-    }
-
-    void goToLobby()
+    public void goToLobby()
     {
         PlayerPrefs.SetInt("i", i);
         SceneManager.LoadScene("Lobby");
