@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private Button _nextPlayer, _prevoiusPlayer,_startGame;
     [SerializeField]
+    private Dropdown _gameMode;
+    [SerializeField]
     private GameObject[] _players=new GameObject[2];
     public  GameObject _currentPlayer;
     public int i = 0;
@@ -53,6 +55,14 @@ public class PlayerManager : MonoBehaviour
     public void goToLobby()
     {
         PlayerPrefs.SetInt("i", i);
-        SceneManager.LoadScene("Lobby");
+        Debug.Log(_gameMode.value);
+        if (_gameMode.value == 0)
+        {
+            SceneManager.LoadScene("Challenge");
+        }
+        else if(_gameMode.value == 1)
+        {
+            SceneManager.LoadScene("Lobby");
+        }
     }
 }

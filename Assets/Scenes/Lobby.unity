@@ -845,14 +845,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunInBackground: 1
-  LogLevel: 1
+  LogLevel: 0
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1294661248}
     PlayerPrefab: {fileID: 2105596234937953848, guid: b1101ba17d6b96e4eb942d46bcaf8196, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 0}
+      Prefab: {fileID: 2105596234937953848, guid: b1101ba17d6b96e4eb942d46bcaf8196, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
@@ -1420,6 +1420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb595159783bf9948a7ee6ce7902d373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vcm: {fileID: 0}
+  _playerTransform: {fileID: 0}
+  _player: {fileID: 0}
 --- !u!1 &1880069013
 GameObject:
   m_ObjectHideFlags: 0
