@@ -22,7 +22,7 @@ public class FollowPlayer : MonoBehaviour
     {
         if (_player == null)
         {
-            _player = GameObject.Find("Player Variant(Clone)");
+            _player = GameObject.Find("Player");
         }
         _playerTransform = _player.transform;
         vcm.LookAt = _playerTransform;
