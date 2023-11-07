@@ -1606,6 +1606,10 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2623220176
       objectReference: {fileID: 0}
+    - target: {fileID: 2871558261553651267, guid: 49aa33d6ef2cb9e4a8ce2ac053e23d3d, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 8180702833498389989, guid: 49aa33d6ef2cb9e4a8ce2ac053e23d3d, type: 3}
       propertyPath: m_Name
       value: Player2 Variant

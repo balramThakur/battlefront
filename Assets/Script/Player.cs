@@ -13,9 +13,12 @@ public class Player : NetworkBehaviour
     [SerializeField]
     private Animator _animation;
     [SerializeField]
+    private Transform _gunIdlePosition;
+    [SerializeField]
     private Transform _gunPosition;
     [SerializeField]
     private GameObject _gun;
+
 
     [SerializeField]
     private float _speed;
@@ -35,14 +38,22 @@ public class Player : NetworkBehaviour
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity*_speed*Time.deltaTime);
             _animation.SetBool("isRunning", true);
-            _gun.transform.position = new Vector3(_gunPosition.transform.position.x, _gunPosition.transform.position.y, _gunPosition.transform.position.z);
-            _gun.transform.eulerAngles = new Vector3(_gunPosition.eulerAngles.x, _gunPosition.eulerAngles.y, _gunPosition.eulerAngles.z);
             _animation.SetBool("isIdle", false);
+            StartCoroutine(gunMovement());
         }
         else
         {
             _animation.SetBool("isRunning", false);
             _animation.SetBool("isIdle", true);
+            _gun.transform.position = new Vector3(_gunIdlePosition.transform.position.x, _gunIdlePosition.transform.position.y, _gunIdlePosition.transform.position.z);
+            _gun.transform.eulerAngles = new Vector3(_gunIdlePosition.eulerAngles.x, _gunIdlePosition.eulerAngles.y, _gunIdlePosition.eulerAngles.z);
         }
+    }
+    // Gun Position on running state
+    IEnumerator gunMovement()
+    {
+        yield return new WaitForSeconds(1.28f);
+        _gun.transform.position = new Vector3(_gunPosition.transform.position.x, _gunPosition.transform.position.y, _gunPosition.transform.position.z);
+        _gun.transform.eulerAngles = new Vector3(_gunPosition.eulerAngles.x, _gunPosition.eulerAngles.y, _gunPosition.eulerAngles.z);
     }
 }
