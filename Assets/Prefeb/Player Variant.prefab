@@ -31,6 +31,37 @@ Transform:
   m_Father: {fileID: 5733697076104228472}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -26.535, y: 88.35, z: 106.019}
+--- !u!1 &6883630265267025584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8203779068234017678}
+  m_Layer: 0
+  m_Name: Gunplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8203779068234017678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6883630265267025584}
+  m_LocalRotation: {x: 0.3739932, y: 0.63756925, z: 0.60928154, w: 0.2870725}
+  m_LocalPosition: {x: 0.245, y: 0.381, z: 1.24}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5733697076104228472}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -34.208, y: 96.438, z: 91.538}
 --- !u!1 &8733843553779411933
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +258,7 @@ MonoBehaviour:
   _animation: {fileID: 8521622597187772116}
   _gunIdlePosition: {fileID: 8711073674622861921}
   _gunPosition: {fileID: 1528935124}
+  _gunplayPosition: {fileID: 8203779068234017678}
   _gun: {fileID: 3164094169939032144}
   _speed: 10
 --- !u!4 &5733697076104228472 stripped
